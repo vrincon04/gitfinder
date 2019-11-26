@@ -1,0 +1,19 @@
+.contributor-card {
+    width: 90%;
+}
+
+.contributor-card-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+.contributor-card-header a {
+    text-decoration: none;
+    color: #673ab7;
+    cursor: pointer;
+}
+
+.contributor-card-header a:hover {
+    text-decoration: underline;
+}

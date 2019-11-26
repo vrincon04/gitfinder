@@ -24,7 +24,7 @@ export class HomeComponent {
 
     this._repositoryService.getRepositories(this.value)
       .subscribe((data: any) => {
-        this.repositories = data.items;
+        this.repositories = data.items.slice(0, 6);
       });
   }
 
@@ -32,8 +32,8 @@ export class HomeComponent {
     this.repositories = [];
   }
 
-  onClick() {
-    this._router.navigateByUrl('contributor');
+  onClick(owner: string, repo: string) {
+    this._router.navigate(['/contributor', owner, repo]);
   }
 
 }

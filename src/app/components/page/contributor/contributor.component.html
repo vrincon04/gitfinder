@@ -1,1 +1,35 @@
-<p>contributor works!</p>
+<mat-card>
+    <mat-card-header>
+        <mat-card-title> {{ repo }} Contributors </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <a [routerLink]="['home']">Go Back...</a>
+    </mat-card-content>
+</mat-card>
+<mat-grid-list cols="4" rowHeight="200px">
+    <mat-grid-tile
+        *ngFor="let contributor of contributors">
+        <mat-card class="contributor-card">
+            <mat-card-header class="contributor-card-header">
+                <img mat-card-avatar [src]="contributor.avatar_url" alt="User Avatar">
+                <mat-card-title>
+                    <a [href]="contributor.html_url" target="_blank">{{ contributor.login  }} </a>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-actions>
+                <button mat-button>
+                    <mat-icon aria-hidden="false" aria-label="Example code icon">code</mat-icon>
+                    <span>Contributions</span>
+                    <span> {{ contributor.contributions | number }} </span>
+                </button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+<mat-card>
+    <mat-card-content>
+        <button mat-button color="primary" (click)="getMore()">
+            <span> Get More... </span>
+        </button>
+    </mat-card-content>
+</mat-card>

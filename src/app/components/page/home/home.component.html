@@ -39,7 +39,7 @@
                     <span class="repository-card-action-name">Star</span>
                     <span> {{ repository.stargazers_count | number}} </span>
                 </button>
-                <button mat-button color="primary" (click)="onClick()">
+                <button mat-button color="primary" (click)="onClick(repository.owner.login, repository.name)">
                     <mat-icon aria-hidden="false" aria-label="Example home icon">group</mat-icon>
                     <span class="repository-card-action-name">Contributors</span>
                 </button>

@@ -6,7 +6,7 @@ import { ContributorComponent } from './components/page/contributor/contributor.
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'contributor', component: ContributorComponent },
+  { path: 'contributor/:owner/:repo', component: ContributorComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
