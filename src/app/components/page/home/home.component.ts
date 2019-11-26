@@ -33,7 +33,7 @@ export class HomeComponent {
   }
 
   onClick() {
-    this._router.navigateByUrl('home');
+    this._router.navigateByUrl('contributor');
   }
 
 }
