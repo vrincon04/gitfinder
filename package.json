@@ -1,6 +1,11 @@
 {
   "name": "gitfinder",
-  "version": "0.0.0",
+  "description": "Pequeño buscador de repositorios públicos en Github.",
+  "author": {
+    "name": "Victor Rincón",
+    "email": "vrinconaquino@gmail.com"
+  },
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
