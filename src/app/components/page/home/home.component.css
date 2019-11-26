@@ -1,0 +1,38 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.repository-card {
+    width: 90%;
+    height: 200px;
+}
+
+.repository-card-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.repository-card-header a {
+    text-decoration: none;
+    color: #673ab7;
+    cursor: pointer;
+}
+
+.repository-card-header a:hover {
+    text-decoration: underline;
+}
+
+.repository-card-content {
+    height: 60px;
+}
+
+.repository-card-action-name {
+    padding-left: 5px;
+    padding-right: 5px;
+}

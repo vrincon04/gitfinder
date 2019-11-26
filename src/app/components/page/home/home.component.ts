@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RepositoriesService } from 'src/app/services/repositories.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ export class HomeComponent {
   value: string = '';
   repositories: any[] = [];
 
-  constructor(private _repositoryService: RepositoriesService) { 
+  constructor(private _repositoryService: RepositoriesService, private _router: Router) { 
     console.info("Home component initialized.");
   }
 
@@ -23,12 +24,16 @@ export class HomeComponent {
 
     this._repositoryService.getRepositories(this.value)
       .subscribe((data: any) => {
-        console.log(data.items);
+        this.repositories = data.items;
       });
   }
 
   onClear() {
     this.repositories = [];
+  }
+
+  onClick() {
+    this._router.navigateByUrl('home');
   }
 
 }
